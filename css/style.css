@@ -1,70 +1,81 @@
 :root{
     --color-primary: #917758;
-}
-*{
+    --color-secondary: #3c2915;
+    --color-primary-light: #f5eee6;
+  }
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body{
+  }
+  
+  body {
     font-family: 'Poppins', sans-serif;
-}
-
-/*******
-*HOME
-*******/
-
-.home{
+  }
+  
+  .container {
+    width: 1170px;
+    margin: 0 auto;
+  }
+  
+  
+  /*************
+  *   HOME
+  *************/
+  .home {
+    position: relative;
     background-size: cover;
     background-image: url(../images/bg-home.jpg);
-    height: 100vh; /* viewport height*/
-}
-
-.home .header{
+    height: 100vh; /* viewport height */
+    background-attachment: fixed;
+  }
+  
+  .home .header {
     padding: 30px 0;
-}
-
-.home .header .nav{
+  }
+  
+  .home .header .nav {
     display: flex;
     justify-content: center;
-}
-
-.home .header .nav ul{
+  }
+  
+  .home .header .nav ul {
     display: flex;
     list-style: none;
-}
-
-.home .header .nav ul li{
+  }
+  
+  .home .header .nav ul li {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 150px;
-}
-
-.home .header .nav ul li a{
+  }
+  
+  .home .header .nav ul li a {
     color: white;
-    text-transform:uppercase;
+    text-transform: uppercase;
     text-decoration: none;
     font-weight: bold;
     font-size: 12px;
     padding: 20px;
-}
-
-.home .header .nav ul li a:hover{
+  }
+  
+  .home .header .nav ul li a:hover {
     border-bottom: 1px solid var(--color-primary);
     color: var(--color-primary);
-}
-
-.home .header .nav ul li .logo{
+  }
+  
+  .home .header .logo {
     margin: 0 30px;
-}
-
-/*******
-*HOME - BANNER
-*******/
-
-.home .banner{
+  }
+  
+  
+  
+  /*****************
+  *  HOME - BANNER
+  ******************/
+  .home .banner {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -72,24 +83,171 @@ body{
     width: 770px;
     margin-left: -385px;
     margin-top: -75px;
+  
     color: white;
     text-align: center;
-}
-
-.home .banner span{
+  }
+  
+  .home .banner span {
     display: block;
-}
-
-.home .banner .first-span{
-    font-size: 14px;
-    text-transform: uppercase;
+  }
+  
+  .home .banner .slogan1 {
     color: var(--color-primary);
+    text-transform: uppercase;
     letter-spacing: 4px;
-}
-.home .banner h1{
+    font-size: 14px;
+  }
+  
+  .home .banner h1 {
     font-size: 120px;
+  }
+  
+  .home .banner .slogan2 {
+    margin-bottom: 15px;
+  }
+  
+  
+  
+  /***********
+  *  ABOUT
+  ************/
+  .about {
+    background-color: var(--color-primary);
+  }
+  
+  .about .container {
+    display: flex;
+  }
+  
+  .about .timing {
+    position: relative;
+    top: -50px;
+    width: 33%;
+    padding: 20px;
+    background-image: url(../images/brush-big.jpg);
+  }
+  
+  .about .timing .overlay {
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .about .timing .icon-cut {
+    width: 50px;
+  }
+  
+  
+  .about .timing h3 {
+    color: var(--color-primary);
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--color-primary);
+    width: fit-content;
+    margin: 0 auto 30px auto;
+    font-size: 30px;
+  }
+  
+  .about .timing .text {
+    margin: 10px 0;
+  }
+  
+  .about .timing .text:after {
+    content: '•';
+    display: block;
+    font-size: 25px;
+    color: white;
+    margin-top: 10px;
+  }
+  
+  .about .timing .text:last-of-type:after {
+    content: '|';
+  }
+  
+  .about .timing .text h4 {
+    color: grey;
+    font-weight: 400;
+    font-size: 15px;
+  }
+  
+  .about .timing span {
+    color: white;
+    font-size: 15px;
+    display: block;
+  }
+  
+  
+  .about .experience {
+    width: 66%;
+    color: white;
+    margin-left: 7%;
+    margin-top: 100px;
+  }
+
+  .about .experience h2{
+      font-weight: 400;
+      font-size: 40px;
+  }
+
+  .about .experience h2::after{
+      display: block;
+      content: '';
+      width: 100px;
+      height: 3px ;
+      background-color: var(--color-primary-light);
+      margin: 20px 0;
+  }
+
+  .about .experience .text{
+      display: flex;
+      justify-content: space-between;
+
+  }
+
+  .about .experience .text p{
+      margin-bottom: 20px;
+      font-weight: 100;
+      font-size: 17px;
+  }
+
+
+/*******
+*Services
+*******/
+
+.services{
+    padding: 100px 0;
+    text-align: center;
+    background-color: var(--color-primary-light);
 }
 
-.home .banner .second-span{
-    margin-bottom: 15px;
+.services h2{
+  color: var(--color-secondary);
+  font-size: 50px;
+  font-weight: 400;
 }
+
+.services .boxes{
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;      
+}
+
+.services .box{
+  border: 3px solid var(--color-primary);
+  padding: 50px 40px;
+  margin: 30px;
+}
+
+.services .box h4{
+  color: var(--color-secondary);
+  margin-top: 30px;
+}
+
+.services .box p{
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+
